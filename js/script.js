@@ -58,8 +58,6 @@ function mostraResultado() {
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = "";
     caixaResultado.classList.add("mostrar");
-    botaoJogarNovamente.removeEventListener("click", jogaNovamente);
-    botaoJogarNovamente.addEventListener("click", jogaNovamente);
 }
 
 function jogaNovamente(){
@@ -69,6 +67,8 @@ function jogaNovamente(){
     telaInicial.style.display = "block";
     caixaPerguntas.classList.remove("mostrar");
     caixaAlternativas.classList.remove("mostrar");
+    botaoJogarNovamente.removeEventListener("click", jogaNovamente);
+    botaoJogarNovamente.addEventListener("click", jogaNovamente);
 }
 function substituiNome(){
     for(const pergunta of perguntas){
