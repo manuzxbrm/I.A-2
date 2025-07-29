@@ -104,3 +104,22 @@ button:hover {
 }
 
 }
+@media (max-width: 480px) {
+  .caixa-principal {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
