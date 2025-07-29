@@ -24,15 +24,16 @@ body {
     max-width: 600px;
     text-align: center;
     padding: 20px;
-}
-
-h1, .caixa-perguntas, .caixa-resultado{
-    font-family: 'Chakra Petch', sans-serif;
     .caixa-principal,
     .caixa-perguntas,
     .caixa-alternativas,
     .caixa-resultado {
     transition: transform 0.3s ease, opacity 0.3s ease;
+}
+}
+
+h1, .caixa-perguntas, .caixa-resultado{
+    font-family: 'Chakra Petch', sans-serif;
 }
 
 }
@@ -57,6 +58,13 @@ button:hover {
 
 .caixa-resultado{
     display: none;
+    .caixa-principal,
+    .caixa-perguntas,
+    .caixa-alternativas,
+    .caixa-resultado {
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
 }
 
 .caixa-resultado.mostrar{
@@ -67,4 +75,11 @@ button:hover {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    .caixa-principal,
+    .caixa-perguntas,
+    .caixa-alternativas,
+    .caixa-resultado {
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
 }
