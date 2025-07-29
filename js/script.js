@@ -68,7 +68,7 @@ function jogaNovamente(){
     caixaPerguntas.classList.remove("mostrar");
     caixaAlternativas.classList.remove("mostrar");
     if (botaoJogarNovamente) {
-  botaoJogarNovamente.addEventListener("click", jogaNovamente);
+    botaoJogarNovamente.addEventListener("click", jogaNovamente);
 }
 }
 function substituiNome(){
