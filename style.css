@@ -36,8 +36,6 @@ h1, .caixa-perguntas, .caixa-resultado{
     font-family: 'Chakra Petch', sans-serif;
 }
 
-}
-
 h1 {
     color: var(--cor-destaque);
 }
@@ -75,7 +73,7 @@ button:hover {
 
 }
 
-.caixa-resultado.mostrar{
+.caixa-resultado.mostrar
     display: block;
     @keyframes aparecer {
     from {
