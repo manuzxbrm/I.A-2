@@ -28,6 +28,13 @@ body {
 
 h1, .caixa-perguntas, .caixa-resultado{
     font-family: 'Chakra Petch', sans-serif;
+    .caixa-principal,
+    .caixa-perguntas,
+    .caixa-alternativas,
+    .caixa-resultado {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
 }
 
 h1 {
