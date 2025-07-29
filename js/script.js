@@ -22,6 +22,7 @@ telaInicial.computedStyleMap.display = 'none';
 caixaPerguntas.classList.remove("mostrar");
 caixaAlternativas.classList.remove("mostrar");
 caixaResultado.classList.remove("mostrar");
+telaInicial.style.display = "none";
 mostraPergunta();
 }
 
@@ -59,7 +60,6 @@ function mostraResultado() {
     caixaResultado.classList.add("mostrar");
     botaoJogarNovamente.removeEventListener("click", jogaNovamente);
     botaoJogarNovamente.addEventListener("click", jogaNovamente);
-}
 }
 
 function jogaNovamente(){
