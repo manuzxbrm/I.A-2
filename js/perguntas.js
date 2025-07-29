@@ -11,7 +11,7 @@ export const perguntas = [
             {
                 texto: "Isso é maravilhoso!",
                 afirmacao: ["Quis saber como usar IA no seu dia a dia.",
-                    "Foi atrás de vídeos, artigos e mais informaçõe sobre como utilizar essa tecnologia."
+                    "Foi atrás de vídeos, artigos e mais informações sobre como utilizar essa tecnologia."
                 ]
             }
         ]
@@ -75,7 +75,7 @@ export const perguntas = [
         alternativas: [
             {
                 texto: "Escrever comandos para o chat é uma forma de contribuir com o trabalho, por isso não é um problema utilizar o texto inteiro.",
-                afirmacao: "Infelizmente passou a utilizar a IA para fazer todas suas tarefas e agora se sente dependente da IA para tudo."
+                afirmacao: ["Infelizmente passou a utilizar a IA para fazer todas suas tarefas e agora se sente dependente da IA para tudo."]
             },
             {
                 texto: "O chat pode ser uma tecnologia muito avançada, mas é preciso manter a atenção pois toda máquina erra, por isso revisar o trabalho e contribuir com as perspectivas pessoais é essencial.",
