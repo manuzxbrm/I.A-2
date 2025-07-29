@@ -67,8 +67,9 @@ function jogaNovamente(){
     telaInicial.style.display = "block";
     caixaPerguntas.classList.remove("mostrar");
     caixaAlternativas.classList.remove("mostrar");
-    botaoJogarNovamente.removeEventListener("click", jogaNovamente);
-    botaoJogarNovamente.addEventListener("click", jogaNovamente);
+    if (botaoJogarNovamente) {
+  botaoJogarNovamente.addEventListener("click", jogaNovamente);
+}
 }
 function substituiNome(){
     for(const pergunta of perguntas){
