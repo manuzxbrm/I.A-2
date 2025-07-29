@@ -66,9 +66,10 @@ function jogaNovamente(){
     atual = 0;
     historiaFinal = "";
     caixaResultado.classList.remove("mostrar");
-    mostraPergunta();
+    telaInicial.style.display = "block";
+    caixaPerguntas.classList.remove("mostrar");
+    caixaAlternativas.classList.remove("mostrar");
 }
-
 function substituiNome(){
     for(const pergunta of perguntas){
         pergunta.enunciado = pergunta.enunciado.replace(/você/g, nome);
