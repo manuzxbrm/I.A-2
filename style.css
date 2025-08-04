@@ -24,12 +24,6 @@ body {
     max-width: 600px;
     text-align: center;
     padding: 20px;
-    .caixa-principal,
-    .caixa-perguntas,
-    .caixa-alternativas,
-    .caixa-resultado {
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
 }
 
 h1, .caixa-perguntas, .caixa-resultado{
@@ -47,14 +41,6 @@ button {
     border-radius: 15px;
     padding: 15px;
     transition: background-color 0.3s;
-    button {
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-button:active {
-    transform: scale(0.97);
-}
-
 }
 
 button:hover {
@@ -64,60 +50,14 @@ button:hover {
 
 .caixa-resultado{
     display: none;
-    .caixa-principal,
-    .caixa-perguntas,
-    .caixa-alternativas,
-    .caixa-resultado {
-    transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
-}
-
-.caixa-resultado.mostrar
+.caixa-resultado.mostrar{
     display: block;
-    @keyframes aparecer {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.caixa-resultado.mostrar {
-    animation: aparecer 0.5s ease forwards;
 }
 
 .caixa-alternativas{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    .caixa-principal,
-    .caixa-perguntas,
-    .caixa-alternativas,
-    .caixa-resultado {
-    transition: opacity 0.4s ease, transform 0.4s ease;
-}
-
-}
-@media (max-width: 480px) {
-  .caixa-principal {
-    padding: 10px;
-    font-size: 14px;
-  }
-
-  h1 {
-    font-size: 24px;
-  }
-
-  p {
-    font-size: 14px;
-  }
-
-  button {
-    padding: 10px;
-    font-size: 14px;
-  }
 }

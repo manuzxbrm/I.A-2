@@ -1,5 +1,5 @@
-import {aleatorio,  nome} from './aleatorio.js';
-import {perguntas} from './perguntas.js';
+import { aleatorio, nome } from './aleatorio.js';
+import { perguntas } from './perguntas.js';
 
 const caixaPrincipal = document.querySelector(".caixa-principal");
 const caixaPerguntas = document.querySelector(".caixa-perguntas");
@@ -15,15 +15,15 @@ let perguntaAtual;
 let historiaFinal = "";
 
 botaoIniciar.addEventListener('click', iniciaJogo);
+
 function iniciaJogo() {
-atual = 0;
-historiaFinal = "";
-telaInicial.computedStyleMap.display = 'none';
-caixaPerguntas.classList.remove("mostrar");
-caixaAlternativas.classList.remove("mostrar");
-caixaResultado.classList.remove("mostrar");
-telaInicial.style.display = "none";
-mostraPergunta();
+    atual = 0;
+    historiaFinal = "";
+    telaInicial.style.display = 'none';
+    caixaPerguntas.classList.remove("mostrar");
+    caixaAlternativas.classList.remove("mostrar");
+    caixaResultado.classList.remove("mostrar");
+    mostraPergunta();
 }
 
 function mostraPergunta() {
@@ -49,7 +49,12 @@ function mostraAlternativas() {
 function respostaSelecionada(opcaoSelecionada) {
     const afirmacoes = aleatorio(opcaoSelecionada.afirmacao);
     historiaFinal += afirmacoes + " ";
-    atual++;
+    if (opcaoSelecionada.proxima !== undefined) {
+        atual = opcaoSelecionada.proxima;
+    } else {
+        mostraResultado();
+        return;
+    }
     mostraPergunta();
 }
 
@@ -58,21 +63,18 @@ function mostraResultado() {
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = "";
     caixaResultado.classList.add("mostrar");
+    botaoJogarNovamente.addEventListener("click", jogaNovamente);
 }
 
-function jogaNovamente(){
+function jogaNovamente() {
     atual = 0;
     historiaFinal = "";
     caixaResultado.classList.remove("mostrar");
-    telaInicial.style.display = "block";
-    caixaPerguntas.classList.remove("mostrar");
-    caixaAlternativas.classList.remove("mostrar");
-    if (botaoJogarNovamente) {
-    botaoJogarNovamente.addEventListener("click", jogaNovamente);
+    mostraPergunta();
 }
-}
-function substituiNome(){
-    for(const pergunta of perguntas){
+
+function substituiNome() {
+    for (const pergunta of perguntas) {
         pergunta.enunciado = pergunta.enunciado.replace(/você/g, nome);
     }
 }
